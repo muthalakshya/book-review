@@ -4,7 +4,7 @@ import BookItem from '../components/BookItem';
 import axios from 'axios';
 
 // Define backend URL
-const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const BookListing = () => {
   const [books, setBooks] = useState([]);

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const BookReviewsByEmail = () => {
   // Backend URL from environment variable
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   
   // State management
   const [reviews, setReviews] = useState([]);

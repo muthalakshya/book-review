@@ -25,7 +25,7 @@ const Register = ({ onRegisterSuccess }) => {
   
   const fileInputRef = useRef(null);
   
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,56 +56,6 @@ const Register = ({ onRegisterSuccess }) => {
     fileInputRef.current.click();
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   // Validate password match
-  //   if (formData.password !== formData.confirmPassword) {
-  //     setFormStatus({
-  //       isSubmitting: false,
-  //       error: "Passwords don't match"
-  //     });
-  //     toast.error("Passwords don't match");
-  //     return;
-  //   }
-
-  //   setFormStatus({ isSubmitting: true, error: null });
-
-  //   // Create form data for file upload
-  //   const submitDataObj = {
-  //     name: formData.name,
-  //     email: formData.email,
-  //     password: formData.password,
-  //     dob: formData.dob,
-  //     mobile: formData.mobile,
-  //     profilePhoto: formData.profilePhoto ? formData.profilePhoto : null
-  //   }
-  //   console.log(formData.profilePhoto)
-  //   try {
-  //     const response = await axios.post(`${backendUrl}/api/user/register`, submitDataObj);
-
-  //     if (response.data.success) {
-  //       toast.success('Registration successful! Please sign in.');
-  //       navigate('/login');
-  //     } else {
-  //       toast.error(response.data.message || 'Registration failed');
-  //       setFormStatus({
-  //         isSubmitting: false,
-  //         error: response.data.message || 'Registration failed'
-  //       });
-  //     }
-  //   } catch (error) {
-  //     console.error('Registration error:', error);
-  //     const errorMessage = error.response?.data?.message || 'Network error. Please try again.';
-  //     toast.error(errorMessage);
-  //     setFormStatus({
-  //       isSubmitting: false,
-  //       error: errorMessage
-  //     });
-  //   }
-  // };
-  
-// In your React component's handleSubmit function
 const handleSubmit = async (e) => {
   e.preventDefault();
 

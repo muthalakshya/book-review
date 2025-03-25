@@ -5,7 +5,7 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';
 import axios from 'axios';
 
 // Define backend URL
-const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const BookDetail = () => {
   const { bookId } = useParams();
